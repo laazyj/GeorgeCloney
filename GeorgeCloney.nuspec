@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>George.Cloney</id>
+	<version>0.0.0</version>
+    <authors>The geniuses at eSpares Software Development</authors>
+    <owners>eSpares Ltd</owners>
+    <licenseUrl>https://espares.kilnhg.com/Code/Levity/Group/GeorgeCloney/Files/LICENSE</licenseUrl>
+    <projectUrl>https://espares.kilnhg.com/Code/Levity/Group/GeorgeCloney/Files/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>DeepClone, Serialize &amp; Deserialize extension methods, useful for testing.</description>
+    <copyright>Copyright 2012</copyright>
+    <tags>Clone, DeepClone, Serialize</tags>
+  </metadata>
+  <files>
+	  <file src="artifacts\publish\GeorgeCloney.dll" target="lib\net40" />
+  </files>
+</package>
