@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>George.Cloney</id>
+    <id>GeorgeCloney</id>
 	<version>0.0.0</version>
-    <authors>The geniuses at eSpares Software Development</authors>
+    <authors>Jason Duffett, David Duffett</authors>
     <owners>eSpares Ltd</owners>
     <licenseUrl>https://espares.kilnhg.com/Code/Levity/Group/GeorgeCloney/Files/LICENSE</licenseUrl>
     <projectUrl>https://espares.kilnhg.com/Code/Levity/Group/GeorgeCloney/Files/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>DeepClone, Serialize &amp; Deserialize extension methods, useful for testing.</description>
-    <copyright>Copyright 2012</copyright>
+    <copyright>Copyright 2012 Jason Duffett, eSpares Ltd</copyright>
     <tags>Clone, DeepClone, Serialize</tags>
   </metadata>
   <files>
