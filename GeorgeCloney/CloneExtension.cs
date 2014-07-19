@@ -106,7 +106,8 @@ namespace GeorgeCloney
                 foreach (var field in fields)
                 {
                     var fieldValue = field.GetValue(original);
-                    field.SetValue(result, fieldValue.deepClone(field.FieldType, copies));
+                    var valueType = fieldValue == null ? field.FieldType : fieldValue.GetType();
+                    field.SetValue(result, fieldValue.deepClone(valueType, copies));
                 }
             }
             else
