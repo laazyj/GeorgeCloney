@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="GitHubIssues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WexmanTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeorgeCloney\GeorgeCloney.csproj">

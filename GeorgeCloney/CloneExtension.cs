@@ -48,7 +48,7 @@ namespace GeorgeCloney
 
         static T deepClone<T>(this T original, Dictionary<Object, Object> copies)
         {
-            return (T)original.deepClone(typeof(T), copies);
+            return (T)original.deepClone(original.GetType(), copies);
         }
 
         public static FieldInfo[] GetFieldInfosIncludingBaseClasses(Type type, BindingFlags bindingFlags)
