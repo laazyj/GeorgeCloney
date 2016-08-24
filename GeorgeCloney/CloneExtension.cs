@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace GeorgeCloney
 {
-    
+
     /// <summary>
     /// With thanks Stack Overflow: http://stackoverflow.com/questions/8025890/is-there-a-much-better-way-to-create-deep-and-shallow-clones-in-c/8026574#8026574
     /// </summary>
@@ -26,15 +26,15 @@ namespace GeorgeCloney
 
         public static T DeepClone<T>(this T original)
         {
-            return typeof(T).IsSerializable 
-                ? original.DeepCloneWithSerialization() 
+            return original.GetType().IsSerializable
+                ? original.DeepCloneWithSerialization()
                 : original.DeepCloneWithoutSerialization();
         }
 
         public static T DeepCloneWithSerialization<T>(this T original)
         {
-            if (!typeof(T).IsSerializable)
-                throw new NotSupportedException(String.Format("Type '{0}' is not Serializable and cannot be cloned with this method.", typeof(T).Name));
+            if (!original.GetType().IsSerializable)
+                throw new NotSupportedException(String.Format("Type '{0}' is not Serializable and cannot be cloned with this method.", original.GetType().Name));
             return original.Serialize().Deserialize<T>();
         }
 
@@ -98,7 +98,7 @@ namespace GeorgeCloney
                 result = Activator.CreateInstance(t);
                 copies.Add(original, result);
 
-                
+
                 var fields =
                     GetFieldInfosIncludingBaseClasses(t, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.FlattenHierarchy |
                                 BindingFlags.Instance);
