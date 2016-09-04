@@ -27,3 +27,6 @@ reflection all properties are recursed so that it really is a "deep" clone.
 	B.Nested.Value = "modified";
 	Assert.AreNotEqual(A.Nested.Value, B.Nested.Value);
 </pre>
+
+Get GeorgeCloney at NuGet.org: https://www.nuget.org/packages/GeorgeCloney/
+
