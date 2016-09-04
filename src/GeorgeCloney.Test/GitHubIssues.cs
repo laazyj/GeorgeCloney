@@ -1,21 +1,21 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 
 namespace GeorgeCloney.Test
 {
-    [TestClass]
+    [TestFixture]
     public class GitHubIssues
     {
-        [TestMethod]
+        [Test]
         [Description("GitHub Issue #1")]
         public void CloneObjectPropertiesAsCorrectType()
         {
             var foo = new Foo() { SomeObject = new Bar() { SomeValue = 13 } };
             var clone = foo.DeepClone();
 
-            Assert.IsInstanceOfType(clone.SomeObject, typeof(Bar));
+            Assert.IsInstanceOf<Bar>(clone.SomeObject);
         }
 
-        [TestMethod]
+        [Test]
         [Description("GitHub Issue #2")]
         public void ClonePropertiesFromBaseClasses()
         {

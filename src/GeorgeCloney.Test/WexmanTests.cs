@@ -1,17 +1,16 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.Diagnostics.CodeAnalysis;
+using NUnit.Framework;
 
 namespace GeorgeCloney.Test
 {
-    [TestClass]
+    [TestFixture]
     public class WexmanTests
     {
-        [TestMethod]
-        public void bla()
+        [Test]
+        [Description("GitHub Pull Request #4")]
+        [SuppressMessage("ReSharper", "UnusedVariable")]
+        public void TestCloneOfAbstractClass()
         {
             BaseClass obj1 = new DerivedClass();
 
